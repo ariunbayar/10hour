@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# https://www.digitalocean.com/community/tutorials/how-to-deploy-python-wsgi-applications-using-uwsgi-web-server-with-nginx
+# http://uwsgi-docs.readthedocs.org/en/latest/StaticFiles.html
+# http://uwsgi-docs.readthedocs.org/en/latest/Upstart.html
+
+uwsgi --static-map /static=./app/static --socket :8080 --protocol=http -w wsgi --master --processes 1
