@@ -57,7 +57,8 @@ def application(env, start_response):
         <link href='/static/favicon.png' rel='shortcut icon' />
     </head>
     <body>
-        %s
+        %s 
+	<img src="/media/what_is_love_cover.png" alt="What Is Love">
     </body>
     </html>
     """ % cache_get('hello')
