@@ -24,12 +24,38 @@ ul.notification {
     margin: 0;
     padding: 0;
     display: block;
-    margin: 0 auto;
+    margin: 50px auto 0 auto;
     width: 300px;
 }
 ul.notification li{
-    background-color: red;
     display: block;
+    margin: 5px 0;
     width: 300px;
-    border: 1px solid blue;
+    border: 3px solid #eee;
+    border-radius: 4px;
+}
+
+ul.notification li div{
+    display: inline-block;
+    padding: 5px;
+}
+ul.notification li div:first-child{
+    width: 229px;
+    border-right: 1px solid #eee;
+    text-shadow: 2px 2px 0px #fff, 4px 4px 0px rgba(0, 0, 0, 0.15);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+ul.notification li div:last-child{
+    width: 50px;
+    padding-right: 5px;
+    color: #ccc;
+}
+
+.video{
+    margin: 0 auto;
+    width: 640px;
+    box-shadow: 0 0 30px #888;
+    border: 10px solid #fff;
+    border-radius: 10px;
 }
