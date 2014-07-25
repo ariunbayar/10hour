@@ -4,4 +4,4 @@
 # http://uwsgi-docs.readthedocs.org/en/latest/StaticFiles.html
 # http://uwsgi-docs.readthedocs.org/en/latest/Upstart.html
 
-uwsgi --static-map /static=./static --socket :8087 --protocol=http -w wsgi --master --processes 2
+uwsgi --static-map /static=./static --socket :$1 --protocol=http -w wsgi --master --processes 2
