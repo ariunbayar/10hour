@@ -7,7 +7,6 @@ import hashlib
 
 
 def render_homepage(session_id):
-    cache_set('hello', 'hello world!')
     content = """
         <!DOCTYPE HTML>
         <html>
@@ -16,12 +15,16 @@ def render_homepage(session_id):
 
             <title>JWPlayer for 10hour</title>
             <link href='/static/favicon.png' rel='shortcut icon' />
+            <link rel="stylesheet" type="text/css" href="/static/css/main.css"/>
             <script src="/static/jwplayer.js"></script>
             <script>jwplayer.key="BSxpAaTPudTB38Uc3YCYtneTFkEHaq90o/XEUw==";</script>
         </head>
         <body>
 
-        %s
+        <div class="header">
+            <h1>10hour</h1>
+        </div>
+        <div class="content">
         <div id="myElement">Loading the player...</div>
         <script type="text/javascript">
             jwplayer("myElement").setup({
@@ -35,10 +38,19 @@ def render_homepage(session_id):
             });
         </script>
 
+        <ul class="notification">
+            <li><div>First blood</div><div>5min</div></li>
+            <li><div>First blood</div><div>5min</div></li>
+            <li><div>First blood</div><div>5min</div></li>
+            <li><div>First blood</div><div>5min</div></li>
+            <li><div>First blood</div><div>5min</div></li>
+        </ul>
+        </div>
+        <div class="footer">&copy; 2014</div>
 
         </body>
         </html>
-    """ % cache_get('hello')
+    """
     return content, 'text/html'
 
 

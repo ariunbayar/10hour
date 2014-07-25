@@ -1,0 +1,35 @@
+body{
+    font-family: Ubuntu, sans-serif, courier;
+    color: #666;
+    margin: 0px;
+    background: #f7f7f7;
+}
+.header, .content, .footer{
+    margin: 0 auto;
+    width: 1000px;
+}
+.header, .footer{
+    text-align: center;
+    padding: 20px;
+    height: 100px;
+}
+.content{
+    box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+    padding: 35px;
+    background: #fff;
+}
+
+ul.notification {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+}
+ul.notification li{
+    background-color: red;
+    display: block;
+    width: 300px;
+    border: 1px solid blue;
+}
