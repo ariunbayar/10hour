@@ -24,6 +24,9 @@ def render_homepage(session_id):
 
         %s
         <div id="myElement">Loading the player...</div>
+        <ul id="notify">
+		<li>Started</li>
+	</ul>
         <script type="text/javascript">
             jwplayer("myElement").setup({
                 file:  "/media/whatislove.flv",
@@ -35,37 +38,46 @@ def render_homepage(session_id):
                 height: 360
             });
 
-	    function im_start() {
-		$.get('/start', {}, function (data){
-			if (data == 'OK') {
-			   setTimeout(first_blood, 5000);
-			} else {
-			   setTimeout(im_start, 500);
+			function notify(message) {
+				$('#notify').prepend(li = $('<li></li>'));
+				li.html(message);
 			}
-		});
-            }
-	    function im_finish() {
-		$.get('/finish', {}, function (data){
-			if (data == '1') {
-			   console.log('finish');
-			} else {
-			   setTimeout(im_finish, 500);
+
+			function im_start() {
+				$.get('/start', {}, function (data){
+					if (data == 'OK') {
+					   setTimeout(first_blood, 5000);
+					} else {
+					   setTimeout(im_start, 500);
+					}
+				});
 			}
-		});
-	    }
-	    function first_blood() {
-		alert('FIRST BLOOD!');
-		setTimeout(double_kill, 5000);
-	    }
-	    function double_kill() {
-		alert('DOUBLE KILL!');
-		setTimeout(triple_kill, 5000);
-	    }
-	    function triple_kill() {
-		alert('TRIPLE KILL!');
-		im_finish();
-	    }
-	    im_start();
+
+			function im_finish() {
+				$.get('/finish', {}, function (data){
+					if (data == '1') {
+					   notify('finish');
+					} else {
+					   setTimeout(im_finish, 1000);
+					}
+				});
+			}
+
+			function first_blood() {
+				notify('FIRST BLOOD!');
+				setTimeout(double_kill, 5000);
+			}
+
+			function double_kill() {
+				notify('DOUBLE KILL!');
+				setTimeout(triple_kill, 5000);
+			}
+
+			function triple_kill() {
+				notify('TRIPLE KILL!');
+				im_finish();
+			}
+			im_start();
         </script>
 
 
