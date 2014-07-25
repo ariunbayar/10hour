@@ -21,7 +21,8 @@ def db_migrate(cursor):
         )
     ''')
 
-def db_demo(conn):
+
+def db_demo():
     conn = db_connect()
     with conn:
         cursor = conn.cursor()
@@ -34,32 +35,31 @@ def db_demo(conn):
             print "id: %s, name: %s" % (id, name)
 
 
-def cacheSet(key, value):
+def cache_set(key, value):
     r = redis.StrictRedis(host='localhost', port=6379, db=0)
     r.set(key, value)
 
-def cacheGet(name):
+
+def cache_get(name):
     r = redis.StrictRedis(host='localhost', port=6379, db=0)
     return r.get(name)
 
+
 def application(env, start_response):
     start_response('200 OK', [('Content-Type', 'text/html')])
-    contentBegin = """
+
+    cache_set('hello', 'hello world!')
+
+    content = """
     <!DOCTYPE HTML>
     <html>
     <head>
         <link href='/static/favicon.png' rel='shortcut icon' />
     </head>
     <body>
-    """
-
-    cacheSet('hello', 'hello world!')
-    contentBody = cacheGet('hello')
-
-    contentEnd = """
+        %s
     </body>
     </html>
-    """
-    content = contentBegin + contentBody + contentEnd
-    return [content]
+    """ % cache_get('hello')
 
+    return [content]
