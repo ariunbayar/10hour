@@ -51,15 +51,35 @@ def application(env, start_response):
     cache_set('hello', 'hello world!')
 
     content = """
-    <!DOCTYPE HTML>
-    <html>
-    <head>
-        <link href='/static/favicon.png' rel='shortcut icon' />
-    </head>
-    <body>
+        <!DOCTYPE HTML>
+        <html>
+        <head>
+            <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+
+            <title>JWPlayer for 10hour</title>
+            <link href='/static/favicon.png' rel='shortcut icon' />
+            <script src="/static/jwplayer.js"></script>
+            <script>jwplayer.key="BSxpAaTPudTB38Uc3YCYtneTFkEHaq90o/XEUw==";</script>
+        </head>
+        <body>
+
         %s
-    </body>
-    </html>
+        <div id="myElement">Loading the player...</div>
+        <script type="text/javascript">
+            jwplayer("myElement").setup({
+                file:  "/media/what_is_love.flv",
+                image: "/media/what_is_love_cover.png",
+                autostart: true,
+                //mute: true,
+                repeat: true,
+                width: 640,
+                height: 360
+            });
+        </script>
+
+
+        </body>
+        </html>
     """ % cache_get('hello')
 
     return [content]
