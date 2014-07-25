@@ -67,7 +67,7 @@ def application(env, start_response):
         <div id="myElement">Loading the player...</div>
         <script type="text/javascript">
             jwplayer("myElement").setup({
-                file:  "/media/what_is_love.flv",
+                file:  "/media/whatislove.flv",
                 image: "/media/what_is_love_cover.png",
                 autostart: true,
                 //mute: true,
