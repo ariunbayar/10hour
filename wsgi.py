@@ -3,6 +3,7 @@ import sqlite3
 import redis
 
 
+# http://www.tutorialspoint.com/sqlite/sqlite_python.htm
 def db_connect():
     cur_dir = os.path.dirname(os.path.realpath(__file__))
     conn = sqlite3.connect(cur_dir + '/10hour.db')
