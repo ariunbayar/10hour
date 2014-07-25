@@ -59,6 +59,7 @@ def application(env, start_response):
             <title>JWPlayer for 10hour</title>
             <link href='/static/favicon.png' rel='shortcut icon' />
             <script src="/static/jwplayer.js"></script>
+            <script src="/static/jquery-2.0.3.min.js"></script>
             <script>jwplayer.key="BSxpAaTPudTB38Uc3YCYtneTFkEHaq90o/XEUw==";</script>
         </head>
         <body>
@@ -75,6 +76,39 @@ def application(env, start_response):
                 width: 640,
                 height: 360
             });
+
+	    function im_start() {
+		$.post({
+		    '10hour.uwen.mn', function (data) {
+			if (data == 'Ok') {
+			   alert('Time started')
+			   setTimeout(function(){ firls_blood()}, 5000);
+			} else {
+			   setTimeout(function(){ im_start()}, 500);
+			}
+		    }
+		});
+            }
+	    function first_blood() {
+		alert('FIRST BLOOD!');
+		setTimeout(function(){ double_kill()}, 10000);
+	    }
+	    function double_kill() {
+		alert('DOUBLE KILL!');
+		setTimeout(function(){ triple_kill()}, 10000);
+	    }
+	    function triple_kill() {
+		alert('TRIPLE KILL!');
+		im_finish();
+	    }
+	    function im_finish() {
+		$.ajax(
+		url:''
+
+		);
+	    }
+	    im_start();
+
         </script>
 
 
