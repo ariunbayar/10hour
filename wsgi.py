@@ -43,12 +43,19 @@ def render_homepage(session_id):
 
 
 def render_start(session_id):
+    begin_time = str(time.time())
+    cache_set(session_id, begin_time)
     return 'OK', 'text/plain'
 
 
 def render_finish(session_id):
-    # returns 1 or 0
-    return '1', 'text/plain'
+    begin_time = cache_get(session_id)
+    if begin_time:
+        official_finish_seconds = 30
+        if time.time() - float(begin_time) > official_finish_seconds:
+            return '1', 'text/plain'
+
+    return '0', 'text/plain'
 
 
 def render_404(session_id):
