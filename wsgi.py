@@ -31,8 +31,8 @@ def render_homepage(session_id):
         </div>
         <script type="text/javascript">
             jwplayer("main_video").setup({
-                file:  "/media/whatislove.flv",
-                image: "/media/what_is_love_cover.png",
+                file:  "/media/what_is_love.flv",
+                image: "/media/what_is_love_cover.jpg",
                 autostart: true,
                 //mute: true,
                 repeat: true,
