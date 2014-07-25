@@ -17,6 +17,7 @@ def render_homepage(session_id):
             <link href='/static/favicon.png' rel='shortcut icon' />
             <link rel="stylesheet" type="text/css" href="/static/css/main.css"/>
             <script src="/static/jwplayer.js"></script>
+            <script src="/static/jquery-2.0.3.min.js"></script>
             <script>jwplayer.key="BSxpAaTPudTB38Uc3YCYtneTFkEHaq90o/XEUw==";</script>
         </head>
         <body>
@@ -26,6 +27,9 @@ def render_homepage(session_id):
         </div>
         <div class="content">
         <div id="myElement">Loading the player...</div>
+        <ul id="notify">
+		<li>Started</li>
+	</ul>
         <script type="text/javascript">
             jwplayer("myElement").setup({
                 file:  "/media/whatislove.flv",
@@ -36,6 +40,47 @@ def render_homepage(session_id):
                 width: 640,
                 height: 360
             });
+
+			function notify(message) {
+				$('#notify').prepend(li = $('<li></li>'));
+				li.html(message);
+			}
+
+			function im_start() {
+				$.get('/start', {}, function (data){
+					if (data == 'OK') {
+					   setTimeout(first_blood, 5000);
+					} else {
+					   setTimeout(im_start, 500);
+					}
+				});
+			}
+
+			function im_finish() {
+				$.get('/finish', {}, function (data){
+					if (data == '1') {
+					   notify('finish');
+					} else {
+					   setTimeout(im_finish, 1000);
+					}
+				});
+			}
+
+			function first_blood() {
+				notify('FIRST BLOOD!');
+				setTimeout(double_kill, 5000);
+			}
+
+			function double_kill() {
+				notify('DOUBLE KILL!');
+				setTimeout(triple_kill, 5000);
+			}
+
+			function triple_kill() {
+				notify('TRIPLE KILL!');
+				im_finish();
+			}
+			im_start();
         </script>
 
         <ul class="notification">
