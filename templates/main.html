@@ -3,24 +3,177 @@
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 
-    <title>JWPlayer for 10hour</title>
+    <title>10H</title>
     <link href='/static/favicon.png' rel='shortcut icon' />
     <link rel="stylesheet" type="text/css" href="/static/css/main.css"/>
 </head>
 <body>
 
 <div class="header">
-    <h1>10hour</h1>
+    <h1>10 hour</h1>
 </div>
 
 <div class="content">
-    <div class="video">
+    <div class="video" style="display:none">
         <div id="main_video">Loading the player...</div>
     </div>
 
-    <ul class="notification">
-        <li><div>Started</div><div></div></li>
+    <ul class="messages" style="display:none">
+        <li data-animate="36000;0.2;">
+        <div class="msg">
+            Таны яруу алдар үүрд мандан бадраг.
+            Та хэмжээлшгүй тэвчээртэй хүн юм.
+            Баяр хүргэе! Та тэмдгийг эзэмших эрхтэй боллоо.
+            <!--<span class="code">TODO</span> кодыг TODO дугаарт илгээж дурсгалын тэмдгийг аваарай-->
+        </div>
+        <div>10 цаг</div>
+        </li>
+        <li data-animate="35700;0.2;"><div class="msg">Үнэхээр цөхрөхгүй байна шүү</div><div>595 мин</div></li>
+        <li data-animate="35400;0.2;"><div class="msg">Яг одоо зогсвол таны амьдралд гайхалтай зүйл тохиолдох болно</div><div>590 мин</div></li>
+        <li data-animate="35100;0.2;"><div class="msg">Одоо бууж өгсөн нь дээр дээ</div><div>585 мин</div></li>
+        <li data-animate="34800;0.2;"><div class="msg">Бууж өг, бууж өг</div><div>580 мин</div></li>
+        <li data-animate="34500;0.2;"><div class="msg">Чадахгүй дээ. 1500 секунд хүлээх хэцүү шүү дээ</div><div>575 мин</div></li>
+        <li data-animate="34200;0.2;"><div class="msg">Хүн хуурах их хэцүү юм байна</div><div>570 мин</div></li>
+        <li data-animate="33900;0.2;"><div class="msg">Яг одоо зогсвол танд 2 тэмдэг өгье</div><div>565 мин</div></li>
+        <li data-animate="33600;0.2;"><div class="msg">Одоо ингээд больцгооё</div><div>560 мин</div></li>
+        <li data-animate="33333;0.2;"><div class="msg">33 333 дахь секунд. Янзтай!</div><div>555.5 мин</div></li>
+        <li data-animate="33000;0.2;"><div class="msg">Цүнхэн дээрээ, малгайн дээрээ зүүж болно</div><div>550 мин</div></li>
+        <li data-animate="32700;0.2;"><div class="msg">Ялагчид энгэрийн тэмдэг дурсгана</div><div>545 мин</div></li>
+        <li data-animate="32400;0.2;"><div class="msg">Та жинхэнэ тэвчээртэй хүн юм</div><div>9 цаг</div></li>
+        <li data-animate="32160;0.2;"><div class="msg">Ойр ойрхон утасдаж байгаарай</div><div>536 мин</div></li>
+        <li data-animate="32100;0.2;"><div class="msg">Удахгүй та бид 2 зам замаа хөөх болох нь дээ</div><div>535 мин</div></li>
+        <li data-animate="31800;0.2;"><div class="msg">10-н цаг болоход их ойртлоо</div><div>530 мин</div></li>
+        <li data-animate="31500;0.2;"><div class="msg">Удахгүй Sparta таны тэвчээрийг шалгах болно</div><div>525 мин</div></li>
+        <li data-animate="31200;0.2;"><div class="msg">Таны тэвчээрийг шалгах болно</div><div>520 мин</div></li>
+        <li data-animate="30900;0.2;"><div class="msg">Хажуугийн ширээний залуу энэ дууг л өдөржин сонсож</div><div>515 мин</div></li>
+        <li data-animate="30600;0.2;"><div class="msg">Өдрийн цайны газарт бас л энэ дуу...</div><div>510 мин</div></li>
+        <li data-animate="30300;0.2;"><div class="msg">Унаандаа суугаад FM сонсохоод энэ л дуу...</div><div>505 мин</div></li>
+        <li data-animate="30000;0.2;"><div class="msg">Өглөө сэрэх бүрт сэрүүлэгний оронд энэ л дуу...</div><div>500 мин</div></li>
+        <li data-animate="29700;0.2;"><div class="msg">Хэтэрхий удаан үзвэл хар дарсан зүүд биелэж...</div><div>495 мин</div></li>
+        <li data-animate="29400;0.2;"><div class="msg">Ахиад нэг цаг тэвчвэл шагнал нь юу болохыг хэлье</div><div>490 мин</div></li>
+        <li data-animate="29100;0.2;"><div class="msg">8 цаг бол өдөрт ажиллах хуулинд заасанд хугацаа юм</div><div>485 мин</div></li>
+        <li data-animate="28800;0.2;"><div class="msg">Гаргууд тэвчээртэй юм. Таныг биширч байна!</div><div>8 цаг</div></li>
+        <li data-animate="28500;0.2;"><div class="msg">Floppy &raquo; CD &raquo; Flash Disk</div><div>475 мин</div></li>
+        <li data-animate="28200;0.2;"><div class="msg">Дэлхийд 1100 идэвхитэй, 2600 идэвхигүй хиймэл дагуул байна</div><div>470 мин</div></li>
+        <li data-animate="27900;0.2;"><div class="msg">"10 цаг"-г хийхэд 10-с ч их цаг зарцуулсан</div><div>465 мин</div></li>
+        <li data-animate="27600;0.2;"><div class="msg">Үсний ургах хурд жилд 15 см</div><div>460 мин</div></li>
+        <li data-animate="27300;0.2;"><div class="msg">&raquo; What is love. Baby, don't hurt me &laquo; </div><div>455 мин</div></li>
+        <li data-animate="27000;0.2;"><div class="msg">Дууг нь чангалаад бүх хүний тэвчээрийг шалга</div><div>450 мин</div></li>
+        <li data-animate="26700;0.2;"><div class="msg">Гоё хэмнэлтэй дуу байгаа биз?</div><div>445 мин</div></li>
+        <li data-animate="26400;0.2;"><div class="msg">"Roboto Condensed" фонтоор бичлээ</div><div>440 мин</div></li>
+        <li data-animate="26100;0.2;"><div class="msg">1+1+1+1+1+1-1+1+1+1=? (10 биш)</div><div>435 мин</div></li>
+        <li data-animate="25800;0.2;"><div class="msg">Зурагдсан пянз, давтагдсан видео</div><div>430 мин</div></li>
+        <li data-animate="25500;0.2;"><div class="msg">Ийм тэвчээртэй юм чинь таныг 20 цагийн уралдаанд оролцуулнаа</div><div>425 мин</div></li>
+        <li data-animate="25200;0.2;"><div class="msg">Та онцгой тэвчээртэй юм</div><div>7 цаг</div></li>
+        <li data-animate="24900;0.2;"><div class="msg">0.07га = ? мкв (1га = 100м x 100м)</div><div>415 мин</div></li>
+        <li data-animate="24600;0.2;"><div class="msg">10 цаг = 600 мин = 36 000 секунд</div><div>410 мин</div></li>
+        <li data-animate="24300;0.2;"><div class="msg">Та 5-р ангийн хүүхдээс тэвчээртэй юу?</div><div>405 мин</div></li>
+        <li data-animate="24000;0.2;"><div class="msg">Хугацааныхаa 2/3-ийг өнгөрүүлээд байна</div><div>400 мин</div></li>
+        <li data-animate="23700;0.2;"><div class="msg">Хот дотор морьтой явж болох уу?</div><div>395 мин</div></li>
+        <li data-animate="23400;0.2;"><div class="msg">Тэвчээрийн шалгуурыг түмэнд түгээ</div><div>390 мин</div></li>
+        <li data-animate="23100;0.2;"><div class="msg">Таавар: 3-н залуу толгойгоо хэдэн удаа эргэлдүүсэн бэ?</div><div>385 мин</div></li>
+        <li data-animate="22800;0.2;"><div class="msg">Энэ хугацаанд 2775-н хүүхэд төрсөн байна</div><div>380 мин</div></li>
+        <li data-animate="22500;0.2;"><div class="msg">8 cекунд тутам нэг хүүхэд шинээр мэндэлдэг</div><div>375 мин</div></li>
+        <li data-animate="22222;0.2;"><div class="msg">22 222 дахь секундийг алга ташин угтъя</div><div>370 мин</div></li>
+        <li data-animate="21900;0.2;"><div class="msg">Энэ хүрч чадаагүй шантарсан хүмүүсээс та илүү шүү</div><div>365 мин</div></li>
+        <li data-animate="21600;0.2;"><div class="msg">Та харьцуулашгүй тэвчээртэй хүн юм</div><div>6 цаг</div></li>
+        <li data-animate="21300;0.2;"><div class="msg">Үнэнээсээ холболт тасарчихлаа одоо зогсоорой!</div><div>355 мин</div></li>
+        <li data-animate="21000;0.2;"><div class="msg">Интернэтийн холболт тасарсан тул үргэлжлүүлэх боломжгүй боллоо</div><div>350 мин</div></li>
+        <li data-animate="20700;0.2;"><div class="msg">Хууртахгүй юм аа :-(</div><div>345 мин</div></li>
+        <li data-animate="20400;0.2;"><div class="msg">Уучлаарай! Алдаа гарлаа</div><div>340 мин</div></li>
+        <li data-animate="20100;0.2;"><div class="msg">Утасны 1102, 1103, 1105, 1109 дугааруудыг мэдэх үү</div><div>335 мин</div></li>
+        <li data-animate="20000;0.2;"><div class="msg">Гайхалтай! 20 000 дахь секунд</div><div>333.3 мин</div></li>
+        <li data-animate="19800;0.2;"><div class="msg">Олон залгуурт давхар олон залгуур залгавал галын аюултай</div><div>330 мин</div></li>
+        <li data-animate="19500;0.2;"><div class="msg">Вэб програмчлал сонирхдог бол uweb.mn сайтад зочлоорой</div><div>325 мин</div></li>
+        <li data-animate="19200;0.2;"><div class="msg">Өдрийн цайгаа уух уу?</div><div>320 мин</div></li>
+        <li data-animate="18900;0.2;"><div class="msg">Кетчупыг шахахад савнаасаа гарах хурд нь 0.045км/цаг</div><div>315 мин</div></li>
+        <li data-animate="18600;0.2;"><div class="msg">Бусдын тэвчээрийг шалгах уу?</div><div>310 мин</div></li>
+        <li data-animate="18300;0.2;"><div class="msg">Та үнэмлэхүй тэвчээртэй хүн юм</div><div>305 мин</div></li>
+        <li data-animate="18000;0.2;"><div class="msg">Одоо яг ийм хугацаагаар хүлээвэл хожлоо</div><div>5 цаг</div></li>
+        <li data-animate="17700;0.2;"><div class="msg">PSY - Gangnam Style</div><div>295 мин</div></li>
+        <li data-animate="17400;0.2;"><div class="msg">Монгол улс 2.8 сая буюу Энэтхэгээс 442 дахин бага хүнтэй</div><div>290 мин</div></li>
+        <li data-animate="17100;0.2;"><div class="msg">Энэтхэг 1.2, Хятад 1.4 тэрбум хүн амтай</div><div>285 мин</div></li>
+        <li data-animate="16800;0.2;"><div class="msg">Япон 127 сая, Орос 142 сая хүн амтай</div><div>280 мин</div></li>
+        <li data-animate="16500;0.2;"><div class="msg">2050 оны машин бол үнэртээд...</div><div>275 мин</div></li>
+        <li data-animate="16200;0.2;"><div class="msg">1993-н оны машин 100д 15 иддэг</div><div>270 мин</div></li>
+        <li data-animate="15900;0.2;"><div class="msg">~85км/ц хурдтай явж байгаа байхаа</div><div>265 мин</div></li>
+        <li data-animate="15600;0.2;"><div class="msg">4 цаг гаруй явлаа. Хэдэн литр шатахуун зарцуулсан бол?</div><div>260 мин</div></li>
+        <li data-animate="15300;0.2;"><div class="msg">Таавар: CD хэдэн удаа гацсан бэ?</div><div>255 мин</div></li>
+        <li data-animate="15000;0.2;"><div class="msg">Энэ олон тэвчээртэй хүмүүсийг яах вэ?</div><div>250 мин</div></li>
+        <li data-animate="14700;0.2;"><div class="msg">Миний бичиж чадах өнгөнүүд дууслаа</div><div>245 мин</div></li>
+        <li data-animate="14400;0.2;"><div class="msg">Та их тэвчээртэй хүн юм</div><div>4 цаг</div></li>
+        <li data-animate="14100;0.2;"><div class="msg">Би тэвчихгүй нь ээ</div><div>235 мин</div></li>
+        <li data-animate="13800;0.2;"><div class="msg">Надад үнэхээр хэцүү байна</div><div>230 мин</div></li>
+        <li data-animate="13500;0.2;"><div class="msg">Тэгэх үү? Гуйж байна!</div><div>225 мин</div></li>
+        <li data-animate="13200;0.2;"><div class="msg">Бид хоёрын нууц гээд ойлгочихъё</div><div>220 мин</div></li>
+        <li data-animate="12900;0.2;"><div class="msg">Таныг 10-н цаг үзэж чадсан гээд хэлчихье</div><div>215 мин</div></li>
+        <li data-animate="12600;0.2;"><div class="msg">Хоёуулаа одоо зогсооё</div><div>210 мин</div></li>
+        <li data-animate="12300;0.2;"><div class="msg">Миний тэвчээр барагдаж байна</div><div>205 мин</div></li>
+        <li data-animate="12000;0.2;"><div class="msg">Хугацааныхаа 1/3-ийг өнгөрүүлээд байна</div><div>200 мин</div></li>
+        <li data-animate="11700;0.2;"><div class="msg">Залуусыг хөгжөөж онгодыг нь хурцлая</div><div>195 мин</div></li>
+        <li data-animate="11400;0.2;"><div class="msg">FB: Like us</div><div>190 мин</div></li>
+        <li data-animate="11111;0.2;"><div class="msg">11 111 дахь секунд, тиймээ!</div><div>185 мин</div></li>
+        <li data-animate="10800;0.2;"><div class="msg">Тэр үед хар зурагтаараа Орбит, Үндэсээ л үздэг байж дээ </div><div>3 цаг</div></li>
+        <li data-animate="10500;0.2;"><div class="msg">Энэ шоу 20-н жилийн өмнө гарсан байна</div><div>175 мин</div></li>
+        <li data-animate="10200;0.2;"><div class="msg">Өнгө алаглуулан бичлээ</div><div>170 мин</div></li>
+        <li data-animate="10000;0.2;"><div class="msg">10 000 секунд, энэ бол дээд амжилт</div><div>166.6 мин</div></li>
+        <li data-animate="9900;0.2;"><div class="msg">Хэмнэлд тааруулаад...1..2..3 </div><div>165 мин</div></li>
+        <li data-animate="9600;0.2;"><div class="msg">Ийм хэцүү байна гэж төсөөлөөгүй биз дээ?</div><div>160 мин</div></li>
+        <li data-animate="9300;0.2;"><div class="msg">Бямба гаригт шоунд явж байна</div><div>155 мин</div></li>
+        <li data-animate="9000;0.2;"><div class="msg">Тэвчээртэй хүнийг шагнал хүлээж байгаа</div><div>150 мин</div></li>
+        <li data-animate="8700;0.2;"><div class="msg">Тог чинь тасарчихвий дээ</div><div>145 мин</div></li>
+        <li data-animate="8400;0.2;"><div class="msg">Хамгийн тэвчээртэй хүн амандаа ус балгаад буцалтал нь зуухан дээр сууна</div><div>140 мин</div></li>
+        <li data-animate="8100;0.2;"><div class="msg">10 цаг төсөл</div><div>135 мин</div></li>
+        <li data-animate="7800;0.2;"><div class="msg">Та унтчихаагүй биз</div><div>130 мин</div></li>
+        <li data-animate="7500;0.2;"><div class="msg">Одоо цаг хэд болж байна аа?</div><div>125 мин</div></li>
+        <li data-animate="7200;0.2;"><div class="msg">Тэвчээртэй бол 2 цагаас ч илүү чадна</div><div>2 цаг</div></li>
+        <li data-animate="6900;0.2;"><div class="msg">Бараг 2 цаг хүрлээ</div><div>115 мин</div></li>
+        <li data-animate="6600;0.2;"><div class="msg">Ийм удаан тэвчих ч хэцүү шүү</div><div>110 мин</div></li>
+        <li data-animate="6300;0.2;"><div class="msg">Танаар бахархаж байна шүү</div><div>105 мин</div></li>
+        <li data-animate="6000;0.2;"><div class="msg">100 минут, үүнийг тэмдэглэх хэрэгтэй</div><div>100 мин</div></li>
+        <li data-animate="5700;0.2;"><div class="msg">Би өлсчихлөө, та өлсөж байна уу?</div><div>95 мин</div></li>
+        <li data-animate="5400;0.2;"><div class="msg">Нэг кино үзэх хугацааг тууллаа</div><div>90 мин</div></li>
+        <li data-animate="5100;0.2;"><div class="msg">"The Roxbury Guys" гэсэн зохиомж</div><div>85 мин</div></li>
+        <li data-animate="5000;0.2;"><div class="msg">Мартах шахлаа 5000 дахь секунд</div><div>83.3 мин</div></li>
+        <li data-animate="4800;0.2;"><div class="msg">"Saturday Night Live" шоунаас</div><div>80 мин</div></li>
+        <li data-animate="4500;0.2;"><div class="msg">Баруун гар талд Will Ferrell</div><div>75 мин</div></li>
+        <li data-animate="4200;0.2;"><div class="msg">CD зогсчихлоо... Яана аа... Үлээгээд...</div><div>70 мин</div></li>
+        <li data-animate="3900;0.2;"><div class="msg">Нэг нь бохь зажилсан байна</div><div>65 мин</div></li>
+        <li data-animate="3600;0.2;"><div class="msg">Тэвчээртэй юм байна</div><div>1 цаг</div></li>
+        <li data-animate="3300;0.2;"><div class="msg">Тархи нь холигдчихлоо</div><div>55 мин</div></li>
+        <li data-animate="3000;0.2;"><div class="msg">3000 секунд өнгөрчээ</div><div>50 мин</div></li>
+        <li data-animate="2700;0.2;"><div class="msg">3-уулаа гинж зүүсэн байна</div><div>45 мин</div></li>
+        <li data-animate="2400;0.2;"><div class="msg">Яг одоо хэдэн хүн үзэж байгаа бол?</div><div>40 мин</div></li>
+        <li data-animate="2100;0.2;"><div class="msg">Бууж өгөхгүй юм уу?</div><div>35 мин</div></li>
+        <li data-animate="2000;0.2;"><div class="msg">2000 дахь секунд</div><div>33.3 мин</div></li>
+        <li data-animate="1800;0.2;"><div class="msg">Зүүн талд Chris Kattan</div><div>30 мин</div></li>
+        <li data-animate="1500;0.2;"><div class="msg">Энэ дуу 1993 онд зохиогдсон</div><div>25 мин</div></li>
+        <li data-animate="1200;0.2;"><div class="msg">Тэвчээртэй ч хангалтгүй байна</div><div>20 мин</div></li>
+        <li data-animate="1000;0.2;"><div class="msg">1000 cекунд</div><div>16.6 мин</div></li>
+        <li data-animate="900;0.2;"><div class="msg">Haddaway - What is love</div><div>15 мин</div></li>
+        <li data-animate="600;0.2;"><div class="msg">Дундах нь Jim Carrey</div><div>10 мин</div></li>
+        <li data-animate="300;0.2;"><div class="msg">Бага зэрэг тэвчээр байна шүү</div><div>5 мин</div></li>
+        <li data-animate="120;0.2;"><div class="msg">Хэлэхэд эрт байна</div><div>2 мин</div></li>
+        <li data-animate="60;0.2;"><div class="msg">Одоохондоо дажгүй юу?</div><div>1 мин</div></li>
+        <li data-animate="30;0.2;"><div class="msg">Дөнгөж эхлэж байна</div><div>30 сек</div></li>
+        <li data-animate="5;0.2;"><div class="msg">Өөрийгөө соригч</div><div>5 сек</div></li>
     </ul>
+
+    <div class="landing">
+        <center>
+            <span data-animate="0.2;0.2;3" class="msg"> Та<br/> </span>
+            <span data-animate="0.4;0.2;3" class="msg"> үнэхээр<br/> </span>
+            <span data-animate="0.6;0.2;3" class="msg"> тэвчээртэй<br/> </span>
+            <span data-animate="0.8;0.2;3" class="msg"> юу?<br/> </span>
+
+            <span data-animate="3.0;0.2;6" class="msg"> Тэгвэл та<br/> </span>
+            <span data-animate="3.2;0.2;6" class="msg"> дараах видеог<br/> </span>
+            <span data-animate="3.4;0.2;6" class="msg"> 10 цаг<br/> </span>
+            <span data-animate="3.6;0.2;6" class="msg"> үзэж чадах уу?<br/> </span>
+
+            <a href="javascript:im_start()" data-animate="6;0.2;" class="btn">Энд дарж эхлүүлнэ үү!</a>
+        </center>
+    </div>
 </div>
 
 <div class="footer">&copy; 2014</div>

@@ -1,5 +1,6 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800|Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic|Open+Sans+Condensed:300,300italic,700|Roboto+Condensed:300italic,400italic,700italic,400,300,700|Comfortaa:400,300,700&subset=cyrillic-ext,latin,latin-ext,cyrillic,vietnamese,greek,greek-ext);
 body{
-    font-family: Ubuntu, sans-serif, courier;
+    font-family: 'Roboto', sans-serif;
     color: #666;
     margin: 0px;
     background: #f7f7f7;
@@ -13,43 +14,55 @@ body{
     padding: 20px;
     height: 100px;
 }
+.header h1{
+    color: #aaa;
+    text-shadow: 3px 2px 0px #f7f7f7, 4px 2px 0 #ccc;
+    margin: 0;
+    font-size: 5em;
+    font-weight: 100;
+}
+.footer{
+    color: #777;
+    font-weight: 300;
+}
 .content{
     box-shadow: 0 0 30px rgba(0, 0, 0, .5);
     padding: 35px;
     background: #fff;
 }
 
-ul.notification {
+ul.messages {
     list-style-type: none;
     margin: 0;
     padding: 0;
     display: block;
     margin: 50px auto 0 auto;
-    width: 300px;
+    width: 600px;
 }
-ul.notification li{
+ul.messages li{
     display: block;
     margin: 5px 0;
-    width: 300px;
+    width: 600px;
     border: 3px solid #eee;
     border-radius: 4px;
 }
 
-ul.notification li div{
+ul.messages li div{
     display: inline-block;
     padding: 5px;
 }
-ul.notification li div:first-child{
-    width: 229px;
+ul.messages li div:first-child{
+    width: 494px;
     border-right: 1px solid #eee;
     text-shadow: 2px 2px 0px #fff, 4px 4px 0px rgba(0, 0, 0, 0.15);
-    font-size: 1.5em;
     font-weight: bold;
 }
-ul.notification li div:last-child{
-    width: 50px;
+ul.messages li div:last-child{
+    width: 70px;
     padding-right: 5px;
     color: #ccc;
+    vertical-align: top;
+    text-align: center;
 }
 
 .video{
@@ -59,3 +72,157 @@ ul.notification li div:last-child{
     border: 10px solid #fff;
     border-radius: 10px;
 }
+
+.landing{
+    min-height: 400px;
+    font-size: 2em;
+}
+
+.msg{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    font-size: 2em;
+    text-shadow: 3px 3px 0px #fff, 6px 6px 0px #ccc;
+}
+
+.btn{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    border: 1px solid #aaa;
+    display: inline-block;
+    border-radius: 3px;
+    padding: 10px 30px;
+    background-color: palegoldenrod;
+    text-shadow: 0 1px 0 #fff;
+    color: rgb(175, 170, 120);
+    box-shadow: 1px 2px 0 #ccc, 1px 2px 0 rgba(255,255,255,.5) inset;
+}
+.btn:hover{
+    box-shadow: none;
+    cursor: pointer;
+}
+a.btn{
+    text-decoration: none;
+}
+
+ul.messages li:nth-child(119n+1){ color: Crimson; }
+ul.messages li:nth-child(119n+2){ color: Aqua; }
+ul.messages li:nth-child(119n+3){ color: Aquamarine; }
+ul.messages li:nth-child(119n+4){ color: BlueViolet; }
+ul.messages li:nth-child(119n+5){ color: Bisque; }
+ul.messages li:nth-child(119n+6){ color: Blue; }
+ul.messages li:nth-child(119n+7){ color: BlanchedAlmond; }
+ul.messages li:nth-child(119n+8){ color: Brown; }
+ul.messages li:nth-child(119n+9){ color: BurlyWood; }
+ul.messages li:nth-child(119n+10){ color: CadetBlue; }
+ul.messages li:nth-child(119n+11){ color: Chartreuse; }
+ul.messages li:nth-child(119n+12){ color: Chocolate; }
+ul.messages li:nth-child(119n+13){ color: Coral; }
+ul.messages li:nth-child(119n+14){ color: CornflowerBlue; }
+ul.messages li:nth-child(119n+15){ color: AntiqueWhite; }
+ul.messages li:nth-child(119n+16){ color: Cyan; }
+ul.messages li:nth-child(119n+17){ color: DarkBlue; }
+ul.messages li:nth-child(119n+18){ color: DarkCyan; }
+ul.messages li:nth-child(119n+19){ color: DarkGoldenRod; }
+ul.messages li:nth-child(119n+20){ color: DarkGray; }
+ul.messages li:nth-child(119n+21){ color: DarkGreen; }
+ul.messages li:nth-child(119n+22){ color: DarkKhaki; }
+ul.messages li:nth-child(119n+23){ color: DarkMagenta; }
+ul.messages li:nth-child(119n+24){ color: DarkOliveGreen; }
+ul.messages li:nth-child(119n+25){ color: DarkOrange; }
+ul.messages li:nth-child(119n+26){ color: DarkOrchid; }
+ul.messages li:nth-child(119n+27){ color: DarkRed; }
+ul.messages li:nth-child(119n+28){ color: DarkSalmon; }
+ul.messages li:nth-child(119n+29){ color: DarkSeaGreen; }
+ul.messages li:nth-child(119n+30){ color: DarkSlateBlue; }
+ul.messages li:nth-child(119n+31){ color: DarkSlateGray; }
+ul.messages li:nth-child(119n+32){ color: DarkTurquoise; }
+ul.messages li:nth-child(119n+33){ color: DarkViolet; }
+ul.messages li:nth-child(119n+34){ color: DeepPink; }
+ul.messages li:nth-child(119n+35){ color: DeepSkyBlue; }
+ul.messages li:nth-child(119n+36){ color: DimGray; }
+ul.messages li:nth-child(119n+37){ color: DodgerBlue; }
+ul.messages li:nth-child(119n+38){ color: FireBrick; }
+ul.messages li:nth-child(119n+39){ color: ForestGreen; }
+ul.messages li:nth-child(119n+40){ color: Fuchsia; }
+ul.messages li:nth-child(119n+41){ color: Gainsboro; }
+ul.messages li:nth-child(119n+42){ color: Gold; }
+ul.messages li:nth-child(119n+43){ color: GoldenRod; }
+ul.messages li:nth-child(119n+44){ color: Gray; }
+ul.messages li:nth-child(119n+45){ color: Green; }
+ul.messages li:nth-child(119n+46){ color: GreenYellow; }
+ul.messages li:nth-child(119n+47){ color: HotPink; }
+ul.messages li:nth-child(119n+48){ color: IndianRed; }
+ul.messages li:nth-child(119n+49){ color: Indigo; }
+ul.messages li:nth-child(119n+50){ color: Khaki; }
+ul.messages li:nth-child(119n+51){ color: Lavender; }
+ul.messages li:nth-child(119n+52){ color: LawnGreen; }
+ul.messages li:nth-child(119n+53){ color: LightBlue; }
+ul.messages li:nth-child(119n+54){ color: LightCoral; }
+ul.messages li:nth-child(119n+55){ color: LightGray; }
+ul.messages li:nth-child(119n+56){ color: LightGreen; }
+ul.messages li:nth-child(119n+57){ color: LightPink; }
+ul.messages li:nth-child(119n+58){ color: LightSalmon; }
+ul.messages li:nth-child(119n+59){ color: LightSeaGreen; }
+ul.messages li:nth-child(119n+60){ color: LightSkyBlue; }
+ul.messages li:nth-child(119n+61){ color: LightSlateGray; }
+ul.messages li:nth-child(119n+62){ color: LightSteelBlue; }
+ul.messages li:nth-child(119n+63){ color: Lime; }
+ul.messages li:nth-child(119n+64){ color: LimeGreen; }
+ul.messages li:nth-child(119n+65){ color: Magenta; }
+ul.messages li:nth-child(119n+66){ color: Maroon; }
+ul.messages li:nth-child(119n+67){ color: MediumAquaMarine; }
+ul.messages li:nth-child(119n+68){ color: MediumBlue; }
+ul.messages li:nth-child(119n+69){ color: MediumOrchid; }
+ul.messages li:nth-child(119n+70){ color: MediumPurple; }
+ul.messages li:nth-child(119n+71){ color: MediumSeaGreen; }
+ul.messages li:nth-child(119n+72){ color: MediumSlateBlue; }
+ul.messages li:nth-child(119n+73){ color: MediumSpringGreen; }
+ul.messages li:nth-child(119n+74){ color: MediumTurquoise; }
+ul.messages li:nth-child(119n+75){ color: MediumVioletRed; }
+ul.messages li:nth-child(119n+76){ color: MidnightBlue; }
+ul.messages li:nth-child(119n+77){ color: MistyRose; }
+ul.messages li:nth-child(119n+78){ color: Moccasin; }
+ul.messages li:nth-child(119n+79){ color: NavajoWhite; }
+ul.messages li:nth-child(119n+80){ color: Navy; }
+ul.messages li:nth-child(119n+81){ color: Olive; }
+ul.messages li:nth-child(119n+82){ color: OliveDrab; }
+ul.messages li:nth-child(119n+83){ color: Orange; }
+ul.messages li:nth-child(119n+84){ color: OrangeRed; }
+ul.messages li:nth-child(119n+85){ color: Orchid; }
+ul.messages li:nth-child(119n+86){ color: PaleGoldenRod; }
+ul.messages li:nth-child(119n+87){ color: PaleGreen; }
+ul.messages li:nth-child(119n+88){ color: PaleTurquoise; }
+ul.messages li:nth-child(119n+89){ color: PaleVioletRed; }
+ul.messages li:nth-child(119n+90){ color: PapayaWhip; }
+ul.messages li:nth-child(119n+91){ color: PeachPuff; }
+ul.messages li:nth-child(119n+92){ color: Peru; }
+ul.messages li:nth-child(119n+93){ color: Pink; }
+ul.messages li:nth-child(119n+94){ color: Plum; }
+ul.messages li:nth-child(119n+95){ color: PowderBlue; }
+ul.messages li:nth-child(119n+96){ color: Purple; }
+ul.messages li:nth-child(119n+97){ color: Red; }
+ul.messages li:nth-child(119n+98){ color: RosyBrown; }
+ul.messages li:nth-child(119n+99){ color: RoyalBlue; }
+ul.messages li:nth-child(119n+100){ color: SaddleBrown; }
+ul.messages li:nth-child(119n+101){ color: Salmon; }
+ul.messages li:nth-child(119n+102){ color: SandyBrown; }
+ul.messages li:nth-child(119n+103){ color: SeaGreen; }
+ul.messages li:nth-child(119n+104){ color: Sienna; }
+ul.messages li:nth-child(119n+105){ color: Silver; }
+ul.messages li:nth-child(119n+106){ color: SkyBlue; }
+ul.messages li:nth-child(119n+107){ color: SlateBlue; }
+ul.messages li:nth-child(119n+108){ color: SlateGray; }
+ul.messages li:nth-child(119n+109){ color: SpringGreen; }
+ul.messages li:nth-child(119n+110){ color: SteelBlue; }
+ul.messages li:nth-child(119n+111){ color: Tan; }
+ul.messages li:nth-child(119n+112){ color: Teal; }
+ul.messages li:nth-child(119n+113){ color: Thistle; }
+ul.messages li:nth-child(119n+114){ color: Tomato; }
+ul.messages li:nth-child(119n+115){ color: Turquoise; }
+ul.messages li:nth-child(119n+116){ color: Violet; }
+ul.messages li:nth-child(119n+117){ color: Wheat; }
+ul.messages li:nth-child(119n+118){ color: Yellow; }
+ul.messages li:nth-child(119n+119){ color: YellowGreen; }
