@@ -12,7 +12,7 @@ var player_options = {
 function im_start() {
     $.get('/start', {}, function (data){
         if (data == 'OK') {
-            $('.video, .messages').show();
+            $('.video, .messages, .stats').show();
             $('.landing').hide();
             animate_by_time('.messages');
             jwplayer.key="BSxpAaTPudTB38Uc3YCYtneTFkEHaq90o/XEUw==";
@@ -48,7 +48,7 @@ function animate_by_time(container){
     $(container + ' [data-animate]').each(function(idx, el){
         var $el = $(el);
         var data = $el.attr('data-animate').split(';');
-        var animate_at = parseFloat(data[0]) * 1000;
+        var animate_at = parseFloat(data[0]) * 1000 / 100;
         var animate_duration = parseFloat(data[1]) * 1000;
         var hide_at = parseFloat(data[2]) * 1000;
         var hide_fn = function(){ $el.hide(); }
@@ -63,6 +63,23 @@ function animate_by_time(container){
     });
 }
 
+function switch_stats(msg){
+    var old_stat = $('.stat-left');
+    var end_events = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
+    old_stat.addClass('fadeOutDown').one(end_events, function(){
+        el = $('<span>');
+        old_stat.after(el);
+        old_stat.remove();
+        el.css('display', 'block');
+        el.addClass('stat-left animated fadeInDown');
+        el.html(msg);
+    });
+}
+
 $(function(){
-    animate_by_time('.landing');
+    //animate_by_time('.landing');
+    im_start();
+    setInterval(function(){
+        switch_stats('hello ' + +new Date);
+    }, 2000);
 });
