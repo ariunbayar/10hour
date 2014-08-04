@@ -48,7 +48,7 @@ function animate_by_time(container){
     $(container + ' [data-animate]').each(function(idx, el){
         var $el = $(el);
         var data = $el.attr('data-animate').split(';');
-        var animate_at = parseFloat(data[0]) * 1000 / 100;
+        var animate_at = parseFloat(data[0]) * 1000;
         var animate_duration = parseFloat(data[1]) * 1000;
         var hide_at = parseFloat(data[2]) * 1000;
         var hide_fn = function(){ $el.hide(); }
