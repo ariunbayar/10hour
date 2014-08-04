@@ -26,7 +26,7 @@ def render_start(session_id):
 def render_finish(session_id):
     begin_time = cache_get(session_id)
     if begin_time:
-        official_finish_seconds = 30
+        official_finish_seconds = 36000
         if time.time() - float(begin_time) > official_finish_seconds:
             return '1', 'text/plain'
 
