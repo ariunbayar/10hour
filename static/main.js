@@ -9,6 +9,8 @@ var player_options = {
     height: 360
 };
 
+var total_secs = 36000;
+
 var start_time = 0;
 
 function im_start() {
@@ -21,7 +23,7 @@ function im_start() {
             var player;
             player = jwplayer("main_video").setup(player_options);
             player.play();
-            setTimeout(im_finish, 36000 * 1000);
+            setTimeout(im_finish, total_secs * 1000);
             start_time = +new Date;
         } else {
             setTimeout(im_start, 500);
@@ -66,19 +68,6 @@ function animate_by_time(container){
     });
 }
 
-function switch_stats(msg){
-    var old_stat = $('.stat-left');
-    var end_events = 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend';
-    old_stat.addClass('fadeOutDown').one(end_events, function(){
-        el = $('<span>');
-        old_stat.after(el);
-        old_stat.remove();
-        el.css('display', 'block');
-        el.addClass('stat-left animated fadeInDown');
-        el.html(msg);
-    });
-}
-
 var update_timer_locked = false;
 function update_timer(){
     if (update_timer_locked) return;
@@ -86,18 +75,29 @@ function update_timer(){
 
     update_timer_locked = true;
 
+    // Statistics: seconds elapsed
     var millis_passed = +new Date - start_time;
     seconds = millis_passed / 1000;
-    $('#stat_timer #spent').html(seconds.toFixed(2));
+    $('.stat_timer .spent').html(seconds.toFixed(2));
+
+    // Statistics: percent completion
+    var percent = (seconds * 100 / total_secs).toFixed(2) + '%';
+    $('.stat_progress .percent').html(percent);
+    $('.stat_progress .bar').css('width', percent);
+
+    // Switch statistics
+    var stats = $('.stats.pull-left').children();
+    var show_idx = Math.round(millis_passed / 8000) % stats.length;
+    var cur_stat = stats.eq(show_idx);
+    stats.not(cur_stat).hide();
+    if (cur_stat.is(':hidden')) {
+        cur_stat.show().css('opacity', 0).animate({'opacity': 1}, 400);
+    }
 
     update_timer_locked = false;
 }
 
 $(function(){
     animate_by_time('.landing');
-    //im_start();
-    //setInterval(function(){
-        //switch_stats('hello ' + +new Date);
-    //}, 2000);
     setInterval(update_timer, 50);
 });

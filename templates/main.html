@@ -8,7 +8,6 @@
 
     <title>10H</title>
     <link href='/static/favicon.png' rel='shortcut icon' />
-    <link rel="stylesheet" type="text/css" href="/static/css/animate.min.css"/>
     <link rel="stylesheet" type="text/css" href="/static/css/main.css"/>
 </head>
 <body>
@@ -25,7 +24,15 @@
     </div>
 
     <div class="stats pull-left" style="display: none;">
-        <span id="stat_timer">Энэ видеог <b id="spent"></b> cекунд үзэж байна</span>
+        <span class="stat_timer" style="display: none;">
+            Энэ видеог <b class="spent"></b> cекунд үзэж байна
+        </span>
+        <span class="stat_progress" style="display: none;">
+            Гүйцэтгэл <b class="percent"></b>
+            <div style="width: 130px; border: 3px solid crimson; border-radius: 3px;">
+                <div class="bar" style="background-color: salmon; height: 20px;"></div>
+            </div>
+        </span>
     </div>
     <div class="stats pull-right" style="display: none;">
         <div
