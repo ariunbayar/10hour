@@ -4,3 +4,4 @@ runserver
 *.db
 *.rdb
 *.swp
+redis-server
