@@ -9,6 +9,8 @@ var player_options = {
     height: 360
 };
 
+var start_time = 0;
+
 function im_start() {
     $.get('/start', {}, function (data){
         if (data == 'OK') {
@@ -19,7 +21,8 @@ function im_start() {
             var player;
             player = jwplayer("main_video").setup(player_options);
             player.play();
-            setTimeout(im_finish, 10000);
+            setTimeout(im_finish, 36000 * 1000);
+            start_time = +new Date;
         } else {
             setTimeout(im_start, 500);
         }
@@ -76,10 +79,25 @@ function switch_stats(msg){
     });
 }
 
+var update_timer_locked = false;
+function update_timer(){
+    if (update_timer_locked) return;
+    if (start_time == 0) return;
+
+    update_timer_locked = true;
+
+    var millis_passed = +new Date - start_time;
+    seconds = millis_passed / 1000;
+    $('#stat_timer #spent').html(seconds.toFixed(2));
+
+    update_timer_locked = false;
+}
+
 $(function(){
     animate_by_time('.landing');
     //im_start();
     //setInterval(function(){
         //switch_stats('hello ' + +new Date);
     //}, 2000);
+    setInterval(update_timer, 50);
 });
