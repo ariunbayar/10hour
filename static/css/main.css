@@ -113,11 +113,9 @@ a.btn{
 }
 
 .stats{
-    background-color: AliceBlue;
     width: 140px;
-    height: 80px;
     margin-top: 50px;
-    overflow: hidden;
+    overflow: visible;
 }
 
 ul.messages li:nth-child(119n+1){ color: Crimson; }
