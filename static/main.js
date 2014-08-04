@@ -77,9 +77,9 @@ function switch_stats(msg){
 }
 
 $(function(){
-    //animate_by_time('.landing');
-    im_start();
-    setInterval(function(){
-        switch_stats('hello ' + +new Date);
-    }, 2000);
+    animate_by_time('.landing');
+    //im_start();
+    //setInterval(function(){
+        //switch_stats('hello ' + +new Date);
+    //}, 2000);
 });
